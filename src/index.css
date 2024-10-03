@@ -1,13 +1,88 @@
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: hsl(212, 45%, 89%);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.QrCodeBox {
+  background-color: white;
+  width: 23rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 39%;
+  top: 12%;
+  position: absolute;
+  padding-top: 20px;
+  border-radius: 15px;
+  height: 33rem;
+}
+
+img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 15px;
+}
+
+.TextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.TextContainer > p:nth-child(1) {
+  width: 314px;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: 1rem;
+}
+
+.TextContainer > p:nth-child(2) {
+  width: 270px;
+  text-align: center;
+  margin-top: 0%;
+  font-size: 16px;
+  font-weight: 400;
+  color: hsl(220, 15%, 55%);
+  line-height: 23px;
+}
+
+/*RESPONSIVE*/
+@media screen and (max-width: 375px) {
+  body {
+    width: 100%;
+    height: 42rem;
+  }
+
+  .QrCodeBox {
+    top: 20%;
+    left: 8.5%;
+    width: 20rem;
+    height: 31.5rem;
+  }
+
+  img {
+    width: 18rem;
+    height: 18rem;
+  }
+
+  .TextContainer > p:nth-child(1) {
+    font-size: 23px;
+    width: 289px;
+  }
+
+  .TextContainer > p:nth-child(2) {
+    font-size: 17px;
+    width: 272px;
+  }
 }
